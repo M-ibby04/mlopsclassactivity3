@@ -21,6 +21,13 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      # 🆕 Add this step right here
+      - name: Create folders
+        run: |
+          mkdir -p data
+          mkdir -p models
+          mkdir -p artifacts
+
       - name: Preprocess data
         run: python preprocess.py
 
